@@ -10,11 +10,10 @@ class Kettle(object):
     def switch(instance):
         instance.on = not instance.on
 
+    def make_hot_water(self):
+        self.water = True
+
 kenwood = Kettle("Kenwood", 8.99)
-kettle1 = Kettle("whatever_type", 9)
-print(kenwood.make)
-print(kenwood.price)
-print(kenwood.on)
-kenwood.power_source = "gas"
-print(Kettle.power_source)
-print(kenwood.power_source)
+kenwood.make_hot_water()
+print(kenwood.water)
+print(kenwood.__dict__)
