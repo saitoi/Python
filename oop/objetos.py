@@ -1,4 +1,4 @@
-class objeto(object):
+class Objeto(object):
 
     list_objetos = []    
 
@@ -7,7 +7,7 @@ class objeto(object):
 
 # x------------------------------------x
 
-class objeto_a(objeto):
+class ObjetoA(Objeto):
 
     list_objetos_a = []    
 
@@ -15,7 +15,7 @@ class objeto_a(objeto):
         super().__init__(codigo)
 
     def __eq__(self, other: object) -> bool:
-        if isinstance(other, objeto_a):
+        if isinstance(other, ObjetoA):
             return abs(self.codigo - other.codigo) < 3
         return False
 
@@ -38,19 +38,6 @@ class objeto_b(objeto):
 
 # x------------------------------------x
 
-# main
-
-
-
-# Arraylist guarda todos os objetos
-# Linked List guarda os objetos A
-    # Diferença de 2 unidades
-# HashSet guarda os objetos B
-    # Diferença de 10 unidades
-
-        
-
-
 def menu():
     print("""" x--- MENU ---x
 1. Criar objetos do tipo A
@@ -61,4 +48,22 @@ def menu():
 6. Sair do programa
 """)
 
+def input_valido():
+    while True:
+        try:
+            return int(input("Digite uma opção: "))
+        except ValueError:
+            print("Digite um número inteiro válido!")
 
+# main
+
+while True:
+    menu()
+    opcao = input_valido()
+
+
+# Arraylist guarda todos os objetos
+# Linked List guarda os objetos A
+    # Diferença de 2 unidades
+# HashSet guarda os objetos B
+    # Diferença de 10 unidades
