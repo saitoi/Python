@@ -10,7 +10,6 @@ class Kettle(object):
     def switch(instance):
         instance.on = not instance.on
 
-
 kenwood = Kettle("Kenwood", 8.99)
 kettle1 = Kettle("whatever_type", 9)
 print(kenwood.make)
